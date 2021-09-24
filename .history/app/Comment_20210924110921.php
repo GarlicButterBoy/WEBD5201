@@ -9,7 +9,7 @@ class Comment extends Model
         return $this->belongsTo(Post::class);
     }
 
-    public function user() //$comment->user->name
+    public function user() //$comment->c
     {
         return $this->belongsTo(User::class);
     }
