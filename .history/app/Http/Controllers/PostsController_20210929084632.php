@@ -19,15 +19,27 @@ class PostsController extends Controller
         //latest() IS EQUIVALENT TO orderBy('created_at', 'desc')
         //$posts = Post::latest()->get();
         // $posts = Post::latest();
-        
+
+        // if ($month = request('month'))
+        // {
+        //     $posts->whereMonth('created_at', Carbon::parse($month)->month);
+        // }
+
+        // if ($year = request('year'))
+        // {
+        //     $posts->whereYear('created_at', Carbon::parse($month)->year);
+        // }
+
         // $posts = $posts->get();
-            
-        $posts = Post::latest()
-        ->filter(request(['month', 'year']))
-        ->get();
 
 
-       // $archives = Post::archives();
+        
+
+        $archives = Post::selectRaw('year(created_at) year, monthname(created_at) month, count(*) published')
+        ->groupBy('year', 'month')
+        ->orderByRaw('min(created_at) desc')
+        ->get()
+        ->toArray();
 
         
 

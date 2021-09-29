@@ -27,7 +27,7 @@ class PostsController extends Controller
         ->get();
 
 
-       // $archives = Post::archives();
+        $archives = Post::archives();
 
         
 

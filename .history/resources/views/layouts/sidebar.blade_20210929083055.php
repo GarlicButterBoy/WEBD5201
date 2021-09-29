@@ -11,9 +11,7 @@
             @foreach ($archives as $month)
                
               <li>
-                <a href="/?month={{$month['month']}}&year={{$month['year']}}">
-                  {{ $month['month'] . ' ' . $month['year'] }}
-                </a>
+                <a href="#">{{ $monthmonth }}</a>
               </li>
 
             @endforeach
