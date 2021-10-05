@@ -27,7 +27,7 @@ class PostsController extends Controller
         // ->filter(request(['month', 'year']))
         // ->get();
 
-        
+        return session('message');
 
         $posts = $posts->all();
 
@@ -71,8 +71,6 @@ class PostsController extends Controller
         auth()->user()->publish(
             new Post(request(['title', 'body']))
         );
-
-        session()->flash('message', 'Thanks for posting!');
         // Post::create([
         //     'title' => request('title'), 
         //     'body' => request('body'), 

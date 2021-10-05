@@ -33,7 +33,7 @@ class RegistrationsController extends Controller
 
         $form->persist();
         
-        session()->flash('message', 'Thanks for signing up!');
+        
         //Redirect
         return redirect()->home();
     }
