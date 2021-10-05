@@ -23,10 +23,10 @@ class PostsController extends Controller
         
         // $posts = $posts->get();
             
-        // $posts = Post::latest()
-        // ->filter(request(['month', 'year']))
-        // ->get();
-        $posts = $posts->all();
+         $posts = Post::latest()
+         ->filter(request(['month', 'year']))
+         ->get();
+        //$posts = $posts->all();
 
 
        // $archives = Post::archives();

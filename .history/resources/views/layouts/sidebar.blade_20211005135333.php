@@ -26,8 +26,8 @@
             @foreach ($tags as $tag)
                
               <li>
-                <a href="/posts/tags/{{$tag}}">
-                  {{ $tag }}
+                <a href="/?month={{$month['month']}}&year={{$month['year']}}">
+                  {{ $tag['name']}}
                 </a>
               </li>
 

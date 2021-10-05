@@ -21,13 +21,13 @@
         </div>
 
         <div class="p-4">
-          <h4 class="fst-italic">Tags</h4>
+          <h4 class="fst-italic">Archives</h4>
           <ol class="list-unstyled mb-0">
-            @foreach ($tags as $tag)
+            @foreach ($archives as $month)
                
               <li>
-                <a href="/posts/tags/{{$tag}}">
-                  {{ $tag }}
+                <a href="/?month={{$month['month']}}&year={{$month['year']}}">
+                  {{ $month['month'] . ' ' . $month['year'] }}
                 </a>
               </li>
 

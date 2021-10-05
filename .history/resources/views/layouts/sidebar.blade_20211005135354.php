@@ -26,8 +26,8 @@
             @foreach ($tags as $tag)
                
               <li>
-                <a href="/posts/tags/{{$tag}}">
-                  {{ $tag }}
+                <a href="/posts/tags/?tag=">
+                  {{ $tag['name']}}
                 </a>
               </li>
 

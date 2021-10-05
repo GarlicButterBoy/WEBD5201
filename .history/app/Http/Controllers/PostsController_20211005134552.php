@@ -14,7 +14,7 @@ class PostsController extends Controller
         $this->middleware('auth', ['except' => 'index', 'show']);
     }
 
-    public function index(Posts $posts)
+    public function index(\App\Tag $tag = null)
     {
         //$posts = \App\Post::all();
         //latest() IS EQUIVALENT TO orderBy('created_at', 'desc')
@@ -22,11 +22,11 @@ class PostsController extends Controller
         // $posts = Post::latest();
         
         // $posts = $posts->get();
-            
-        // $posts = Post::latest()
-        // ->filter(request(['month', 'year']))
-        // ->get();
-        $posts = $posts->all();
+        return 
+         $posts = Post::latest()
+         ->filter(request(['month', 'year']))
+         ->get();
+        //$posts = $posts->all();
 
 
        // $archives = Post::archives();

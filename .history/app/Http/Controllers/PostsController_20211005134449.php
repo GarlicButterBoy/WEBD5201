@@ -26,7 +26,7 @@ class PostsController extends Controller
         // $posts = Post::latest()
         // ->filter(request(['month', 'year']))
         // ->get();
-        $posts = $posts->all();
+        //$posts = $posts->all();
 
 
        // $archives = Post::archives();

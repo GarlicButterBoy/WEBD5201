@@ -6,12 +6,8 @@
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
         <h1>{{ $post->title }}</h1>
 
-        @if (count($post->tags))
-    <ul>
-        @foreach ($post->tags as $tag)
-        <li><a href="/posts/tags/{{$tag->name}}">{{$tag->name}}</a></li>
-        @endforeach
-    </ul>
+        @if
+    
         @endif
 
         <p>{{ $post->body }}</p>

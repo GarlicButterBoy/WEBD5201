@@ -43,7 +43,7 @@ Route::post('/posts', 'PostsController@store');
 Route::get('/posts/{post}', 'PostsController@show'); //Replaced -> //Route::get('/tasks', function () {});
 
 //TAGS
-Route::get('/posts/tags/{tag}', 'TagsController@index');
+Route::get('/posts/tags/{tag}')
 
 //COMMENTS
 Route::post('/posts/{post}/comments', 'CommentsController@store');
