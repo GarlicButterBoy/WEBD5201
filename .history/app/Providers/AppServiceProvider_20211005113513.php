@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //\App::bind('App\Billing\Stripe', function() {
         $this->app->singleton(Stripe::class, function() {
-            return new Stripe(config('services.stripe.secret'));
+            return new \App\Billing\Stripe(config('services.stripe.secret'));
         });
     }
 }
