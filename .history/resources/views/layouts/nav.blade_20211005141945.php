@@ -3,6 +3,9 @@
       <a class="p-2 link-secondary" href="/">Home</a>
       <a class="p-2 link-secondary" href="/about">About Page</a>
       <a class="p-2 link-secondary" href="/posts/create">Create a Post</a>
+      <a class="p-2 link-secondary" href="/about">About Page</a>
+      <a class="p-2 link-secondary" href="/about">About Page</a>
+      <a class="p-2 link-secondary" href="/about">About Page</a>
 
       @if (Auth::check())
       <p class="p-2 ml-auto" href="#">{{ Auth::user()->name }}</p>
