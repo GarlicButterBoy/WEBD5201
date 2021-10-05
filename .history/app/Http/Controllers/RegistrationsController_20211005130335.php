@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Mail;
+use App\Mail\Welcome;
 use App\Http\Requests\RegistrationForm;
 
 class RegistrationsController extends Controller

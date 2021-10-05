@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Mail;
+use App\Mail\Welcome;
 use App\Http\Requests\RegistrationForm;
 
 class RegistrationsController extends Controller
@@ -11,7 +14,7 @@ class RegistrationsController extends Controller
         return view ('registration.create');
     }
 
-    public function store(RegistrationForm $form)
+    public function store(RegistrationForm $request)
     {
         //Validate
         // $this->validate(request(), [
@@ -31,7 +34,6 @@ class RegistrationsController extends Controller
         // //Sending Emails
         // \Mail::to($user)->send(new Welcome($user));
 
-        $form->persist();
         //Redirect
         return redirect()->home();
     }
