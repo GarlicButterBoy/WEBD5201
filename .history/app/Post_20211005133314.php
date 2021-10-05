@@ -55,8 +55,7 @@ class Post extends Model
 
     public function tags()
     {
-        //M:M Relationship
-        return $this->belongsToMany(Tag::class);
+        
     }
 }
 

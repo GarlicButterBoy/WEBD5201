@@ -53,10 +53,9 @@ class Post extends Model
         ->toArray();
     }
 
-    public function tags()
+    public function tag()
     {
-        //M:M Relationship
-        return $this->belongsToMany(Tag::class);
+        
     }
 }
 
